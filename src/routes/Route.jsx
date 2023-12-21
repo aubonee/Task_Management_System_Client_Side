@@ -5,6 +5,9 @@ import {
 import MainLayout from "../layout/MainLayout";
 import ErrorPage from "../pages/errorPage/ErrorPage";
 import HomePage from "../pages/hpmepage/HomePage";
+import Login from "../pages/login/Login";
+import SignUp from "../pages/signUp/SignUp";
+import AddTask from "../pages/dashboard/addTask/AddTask";
   
 
  export const router = createBrowserRouter([
@@ -16,7 +19,28 @@ import HomePage from "../pages/hpmepage/HomePage";
         {
           path: "/",
         element: <HomePage></HomePage>,
+        },
+        {
+          path: "/login",
+          element: <Login></Login>,
+        },
+        {
+          path: "/signup",
+          element: <SignUp></SignUp>
         }
       ]
     },
+    {
+      path: "/dashboard",
+      // element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+      element:<AddTask></AddTask>,
+      children:[
+         
+          {
+              path: "add Task",
+              element:<AddTask></AddTask>
+          }
+        
+      ]
+  }
   ]);
