@@ -13,7 +13,7 @@ const Navbar = () => {
     const navItems =<>
     <li><NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "  text-xl font-bold underline underline-offset-8" : " text-xl font-bold"}> Home</NavLink></li>
    
-      <li><NavLink to="/whychooseus" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "  text-xl font-bold underline underline-offset-8" : " text-xl font-bold"}> whychooseus</NavLink></li>
+      <li><NavLink to="/whyChooseUs" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "  text-xl font-bold underline underline-offset-8" : " text-xl font-bold"}> whychooseus</NavLink></li>
       <li><NavLink to="/dashboard" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "  text-xl font-bold underline underline-offset-8" : " text-xl font-bold"}> Dashboard</NavLink></li>
       <li><NavLink to="/contactus" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "  text-xl font-bold underline underline-offset-8" : " text-2xl font-bold"}> Contact Us</NavLink></li>
       {
@@ -41,8 +41,8 @@ const Navbar = () => {
   </div>
 </div>
           </div>
-          <div className=" logo-font text-[#95262a] font-semibold text-xl flex items-center"> <img src={logo} alt="" className='w-[60px]' />
-          <h2>TaskTracker</h2></div>
+          <div className=" logo-font text-[#F7B32B] font-bold text-xl flex items-center"> <img src={logo} alt="" className='w-[60px]' />
+          <h2>TaskManager</h2></div>
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
