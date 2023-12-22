@@ -38,37 +38,33 @@ const TaskList = () => {
           });
     }
     return (
-        <div>
-            <div className="todo-items">
-
-            <div className="overflow-x-auto">
-  <table className="table">
-    {/* head */}
-    <thead>
-      <tr>
-        <th></th>
-        <th>To-Do Tasks</th>
-        <th>Action</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      {/* row 1 */}
-    {
-        tasks.map((item,index)=>
-        <tr key={item._id}>
-            <th> {index+1} </th>
-            <td> {item.title}</td>
-            <td> <Link to={`/dashboard/salaryUpdate/${item._id}`}  className='btn text-black bg-yellow-500'>Edit</Link></td>
-            <td><button onClick={() => handleDeleteTask(item)}>delete</button></td>
+        <div className=' grid grid-cols-1 lg:grid-cols-3 gap-5 justify-center items-center'>
             
-        </tr>
+
+           
+  <div className="card bg-green-400 min-h-screen p-5">
+   
+    {
+        tasks.map((item,)=>
+        <div className='card p-3 my-3 bg-gray-300' key={item._id}>
+            
+            <h2 className=''><span className='font-semibold uppercase'> Task title:  </span>{item.title}</h2>
+            <h2 className=''><span className='font-semibold uppercase'> Task Description:  </span>{item.desc}</h2>
+            <h2 className=''><span className='font-semibold uppercase'> Task Deadline:  </span>{item.selectedDate}</h2>
+            <div className='flex justify-between'>
+            <button> <Link to={`/dashboard/updateTask/${item._id}`}  className='btn text-black bg-yellow-400 '>Edit</Link></button>
+            <button className=' btn text-white bg-red-500' onClick={() => handleDeleteTask(item)}>delete</button>
+            </div>
+            
+      </div>
         )
      } 
-    </tbody>
-  </table>
-</div>
+   
+  
+
             </div>
+            <div className=' card bg-green-400 min-h-screen p-5'></div>
+            <div className='card bg-green-400 min-h-screen p-5'></div>
         </div>
     );
 };

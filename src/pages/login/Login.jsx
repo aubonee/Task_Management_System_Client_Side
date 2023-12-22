@@ -71,14 +71,14 @@ const Login = () => {
      
     </div>
     <div className="form-control mt-6">
-      <button className="btn bg-[#702632] text-white">Login</button>
+      <button className="btn bg-[#F7B32B] text-white">Login</button>
 
       <div className='flex items-center justify-center my-2'><GoogleLogin></GoogleLogin></div>
       
     </div>
     {/* <div className='flex items-center justify-center my-2'><GoogleLogin></GoogleLogin></div> */}
   </form>
-  <div className='text-center mb-5'><p>Dont have an account?</p> <span className='text-[#702632] font-bold'> <Link to="/register">Register</Link></span> </div>
+  <div className='text-center mb-5'><p>Dont have an account?</p> <span className='text-[#F7B32B] font-bold'> <Link to="/register">Register</Link></span> </div>
 </div>
 </div>
 </div>

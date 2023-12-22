@@ -15,7 +15,7 @@ const Navbar = () => {
    
       <li><NavLink to="/whychooseus" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "  text-xl font-bold underline underline-offset-8" : " text-xl font-bold"}> whychooseus</NavLink></li>
       <li><NavLink to="/dashboard" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "  text-xl font-bold underline underline-offset-8" : " text-xl font-bold"}> Dashboard</NavLink></li>
-      <li><NavLink to="/contactus" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "  text-xl font-bold underline underline-offset-8" : " text-2xl font-bold"}> Home</NavLink></li>
+      <li><NavLink to="/contactus" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "  text-xl font-bold underline underline-offset-8" : " text-2xl font-bold"}> Contact Us</NavLink></li>
       {
     user ?
     <button onClick={handleSignOut} className="text-sm  my-2 mx-2 btn rounded-none   border-2 border-spacing-y-3 border-spacing-x-7 text-[#d2cb4e]">Sign Out</button>

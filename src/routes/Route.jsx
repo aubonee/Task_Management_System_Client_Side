@@ -11,6 +11,7 @@ import AddTask from "../pages/dashboard/addTask/AddTask";
 import PrivateRoute from "./PrivateRoute";
 import DashboardLayout from "../layout/DashboardLayout";
 import TaskList from "../pages/dashboard/taskList/TaskList";
+import UpdateTask from "../pages/dashboard/UpdateTask";
   
 
  export const router = createBrowserRouter([
@@ -46,7 +47,19 @@ import TaskList from "../pages/dashboard/taskList/TaskList";
           {
             path: "tasklist",
             element:<TaskList></TaskList>
-        }
+        },
+      //   {
+      //     path: 'updateTask/:id',
+      //     element:<UpdateTask></UpdateTask> ,
+      //     loader: ({params}) => fetch(`http://localhost:5173/dashboard/updateTask/${params.id}`)
+
+      // },
+      {
+        path: 'updateTask/:id',
+        element:<UpdateTask></UpdateTask> ,
+        loader: ({params}) => fetch(`http://localhost:5000/updateTask/${params.id}`)
+
+    },
         
       ]
   }
