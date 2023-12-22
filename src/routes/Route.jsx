@@ -37,7 +37,7 @@ import AddTask from "../pages/dashboard/addTask/AddTask";
       children:[
          
           {
-              path: "add Task",
+              path: "tasklist",
               element:<AddTask></AddTask>
           }
         

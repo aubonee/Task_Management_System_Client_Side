@@ -1,10 +1,11 @@
 import React from 'react';
+import logo from '../../../assets/images/logo.png'
 
 const Navbar = () => {
     const navItems =<>
     <li><a href='#home'>Home</a></li>
-      <li><a href='#aboutme'>About</a></li>
-      <li><a href='#education'>Education</a></li>
+      <li><a href='#aboutme'>Why Choose Us</a></li>
+      <li><a href='#education'>Contact Us</a></li>
       <li><a href='#projects'>Projects</a></li>
       <li><a href='#skills'>Skills</a></li>
       
@@ -29,7 +30,8 @@ const Navbar = () => {
   </div>
 </div>
           </div>
-          <a className=" logo-font text-[#95262a] font-semibold text-xl">TahsinAubonee<span className='font-bold text-2xl'>.</span></a>
+          <div className=" logo-font text-[#95262a] font-semibold text-xl flex items-center"> <img src={logo} alt="" className='w-[60px]' />
+          <h2>TaskTracker</h2></div>
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
