@@ -10,6 +10,7 @@ import SignUp from "../pages/signUp/SignUp";
 import AddTask from "../pages/dashboard/addTask/AddTask";
 import PrivateRoute from "./PrivateRoute";
 import DashboardLayout from "../layout/DashboardLayout";
+import TaskList from "../pages/dashboard/taskList/TaskList";
   
 
  export const router = createBrowserRouter([
@@ -39,9 +40,13 @@ import DashboardLayout from "../layout/DashboardLayout";
       children:[
          
           {
-              path: "tasklist",
+              path: "addtask",
               element:<AddTask></AddTask>
-          }
+          },
+          {
+            path: "tasklist",
+            element:<TaskList></TaskList>
+        }
         
       ]
   }

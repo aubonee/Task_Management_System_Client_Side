@@ -9,7 +9,7 @@ const DashboardLayout = () => {
         <div>
             
             <div>
-                <div className="drawer">
+                <div className="drawer z-10">
   <input id="my-drawer" type="checkbox" className="drawer-toggle" />
    
   <div className="drawer-side">
@@ -23,8 +23,8 @@ const DashboardLayout = () => {
       }
     </div>
       <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
-      <div>  <li> <NavLink to="/dashboard/tasklist" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-xl flex bg-purple-600 text-white p-4" : "p-4 text-lg flex"}>  <FaList className='flex justify-center items-center mt-1 mx-2'></FaList>Task List</NavLink></li> </div>
+      <li> <NavLink to="/dashboard/tasklist" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-xl flex bg-purple-600 text-white p-4" : "p-4 text-lg flex"}>  <FaList className='flex justify-center items-center mt-1 mx-2'></FaList>Task List</NavLink></li>
+      <li> <NavLink to="/dashboard/addtask" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-xl flex bg-purple-600 text-white p-4" : "p-4 text-lg flex"}>  <FaList className='flex justify-center items-center mt-1 mx-2'></FaList> Add Task </NavLink></li> 
       
     </ul>
   </div>

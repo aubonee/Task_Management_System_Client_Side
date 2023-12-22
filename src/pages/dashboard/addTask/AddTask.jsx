@@ -9,9 +9,7 @@ const AddTask = () => {
          <div className='w-1/2'>
          <TaskForm></TaskForm>
          </div> 
-         <div className='w-1/2'>
-         <TaskList></TaskList>
-         </div>    
+           
          
             
         </div>

@@ -110,7 +110,7 @@ const TaskForm = () => {
                            
                             
                             <div className="form-control mt-6">
-                                <input className="btn bg-black w-full text-white " type="submit" value="Sign Up" />
+                                <input className="btn bg-black w-full text-white " type="submit" value="Add Task" />
                             </div>
                         </form>
         </div>
