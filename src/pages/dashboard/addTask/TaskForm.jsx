@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from "react-hook-form";
 import useAxiosPublic from '../../../hooks/UseAxiosPublic';
 import Swal from 'sweetalert2';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const TaskForm = () => {
+    const {user} = useContext(AuthContext);
     const axiosPublic = useAxiosPublic();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [selectedDate, setSelectedDate] = useState(null);
@@ -22,6 +24,8 @@ const TaskForm = () => {
                 desc: data.desc,
                 selectedDate,
                 priority: data.priority,
+                email:user?.email
+
               
             }
             console.log(TaskItem);

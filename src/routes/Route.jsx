@@ -8,6 +8,8 @@ import HomePage from "../pages/hpmepage/HomePage";
 import Login from "../pages/login/Login";
 import SignUp from "../pages/signUp/SignUp";
 import AddTask from "../pages/dashboard/addTask/AddTask";
+import PrivateRoute from "./PrivateRoute";
+import DashboardLayout from "../layout/DashboardLayout";
   
 
  export const router = createBrowserRouter([
@@ -32,8 +34,8 @@ import AddTask from "../pages/dashboard/addTask/AddTask";
     },
     {
       path: "/dashboard",
-      // element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
-      element:<AddTask></AddTask>,
+      element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+     
       children:[
          
           {

@@ -1,16 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../../assets/images/logo.png'
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Navbar = () => {
+     const {user, logOut} = useContext(AuthContext);
+     const handleSignOut =() =>{
+        logOut()
+        .then()
+        .catch()
+      }
     const navItems =<>
-    <li><a href='#home'>Home</a></li>
-      <li><a href='#aboutme'>Why Choose Us</a></li>
-      <li><a href='#education'>Contact Us</a></li>
-      <li><a href='#projects'>Projects</a></li>
-      <li><a href='#skills'>Skills</a></li>
-      
-      <li><a href='#contactme'>Contact me</a></li>
-    
+    <li><NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "  text-xl font-bold underline underline-offset-8" : " text-xl font-bold"}> Home</NavLink></li>
+   
+      <li><NavLink to="/whychooseus" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "  text-xl font-bold underline underline-offset-8" : " text-xl font-bold"}> whychooseus</NavLink></li>
+      <li><NavLink to="/dashboard" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "  text-xl font-bold underline underline-offset-8" : " text-xl font-bold"}> Dashboard</NavLink></li>
+      <li><NavLink to="/contactus" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "  text-xl font-bold underline underline-offset-8" : " text-2xl font-bold"}> Home</NavLink></li>
+      {
+    user ?
+    <button onClick={handleSignOut} className="text-sm  my-2 mx-2 btn rounded-none   border-2 border-spacing-y-3 border-spacing-x-7 text-[#d2cb4e]">Sign Out</button>
+  :
+  <Link className=" my-2 mx-2 btn rounded-none  border-2 border-spacing-y-3 border-spacing-x-7 text-[#d2cb4e] " to="/Login">Login</Link>
+  }
     </>
     return (
         <div>
