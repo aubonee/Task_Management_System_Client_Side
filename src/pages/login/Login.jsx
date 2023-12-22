@@ -78,7 +78,7 @@ const Login = () => {
     </div>
     {/* <div className='flex items-center justify-center my-2'><GoogleLogin></GoogleLogin></div> */}
   </form>
-  <div className='text-center mb-5'><p>Dont have an account?</p> <span className='text-[#F7B32B] font-bold'> <Link to="/register">Register</Link></span> </div>
+  <div className='text-center mb-5'><p>Dont have an account?</p> <span className='text-[#F7B32B] font-bold'> <Link to="/signup">Register</Link></span> </div>
 </div>
 </div>
 </div>

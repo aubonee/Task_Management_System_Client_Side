@@ -24,7 +24,7 @@ const DashboardLayout = () => {
     </div>
     <div className="divider"></div>
     
-      <li> <NavLink to="/dashboard/tasklist" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-xl flex bg-purple-600 text-white p-4" : "p-4 text-lg flex"}>  <FaList className='flex justify-center items-center mt-1 mx-2'></FaList>Task List</NavLink></li>
+      <li> <NavLink to="/dashboard" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-xl flex bg-purple-600 text-white p-4" : "p-4 text-lg flex"}>  <FaList className='flex justify-center items-center mt-1 mx-2'></FaList>Task List</NavLink></li>
       <li> <NavLink to="/dashboard/addtask" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-xl flex bg-purple-600 text-white p-4" : "p-4 text-lg flex"}>  <FaList className='flex justify-center items-center mt-1 mx-2'></FaList> Add Task </NavLink></li>
      <div className="divider"></div>
      <li><NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "  text-xl font-bold underline underline-offset-8" : " text-2xl font-bold"}> Home</NavLink></li>

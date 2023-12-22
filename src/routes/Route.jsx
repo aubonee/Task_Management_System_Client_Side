@@ -13,6 +13,7 @@ import DashboardLayout from "../layout/DashboardLayout";
 import TaskList from "../pages/dashboard/taskList/TaskList";
 import UpdateTask from "../pages/dashboard/UpdateTask";
 import WhyChooseUs from "../pages/WhyChooseUs";
+import ContactUs from "../pages/ContactUs";
   
 
  export const router = createBrowserRouter([
@@ -28,6 +29,10 @@ import WhyChooseUs from "../pages/WhyChooseUs";
         {
           path: "/whyChooseUs",
           element: <WhyChooseUs></WhyChooseUs>
+        },
+        {
+          path: "/contactUs",
+          element: <ContactUs></ContactUs>
         },
         {
           path: "/login",
@@ -50,14 +55,14 @@ import WhyChooseUs from "../pages/WhyChooseUs";
               element:<AddTask></AddTask>
           },
           {
-            path: "tasklist",
+            path: "",
             element:<TaskList></TaskList>
         },
  
       {
         path: 'updateTask/:id',
         element:<UpdateTask></UpdateTask> ,
-        loader: ({params}) => fetch(`http://localhost:5000/updateTask/${params.id}`)
+        loader: ({params}) => fetch(`https://task-management-server-side-sable.vercel.app/updateTask/${params.id}`)
 
     },
         

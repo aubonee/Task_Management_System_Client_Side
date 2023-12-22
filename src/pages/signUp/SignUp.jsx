@@ -74,7 +74,6 @@ const SignUp = () => {
      <div className="hero w-full min-h-screen bg-base-200">
 <div className="hero-content flex-col ">
 <div className="text-center lg:text-left">
-<h1 className="text-5xl font-bold text-[#702632]">Register now!</h1>
 
 </div>
 <div className="card mx-24 flex-shrink-0 w-full  shadow-2xl bg-base-100">
@@ -107,7 +106,7 @@ const SignUp = () => {
   
  </div>
  <div className="form-control mt-6">
-   <button className="btn bg-[#702632] text-white">Register</button>
+   <button className="btn bg-[#F7B32B] text-white">Register</button>
  
    <div className='flex items-center justify-center my-2'><GoogleLogin></GoogleLogin></div>
  </div>
